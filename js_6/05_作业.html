@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	/*
+	编写一个函数rev用于将一个整数前后倒置。
+	例如rev(12345)将返回54321，rev(123)将返回321
+	整数位数不限制，多少位都行。
+
+	参数：一个数字a
+	返回值：a倒置数
+
+	声明b 接收a倒置数 var b = 0;
+	a = 1234  b =4321
+
+	b = 0 + a % 10; 的到a的个位并且给b=4
+	a = parseInt(a / 10) 去掉a个位 a = 123
+
+
+	b = b* 10（向进一位） + a % 10;  b = 43
+	a = parseInt(a / 10) 去掉a个位 a = 12
+
+
+	b = b*10 + a % 10; (b当前值向前进一位 +a当前的个位)
+	a = parseInt(a / 10) 去掉a个位a = 1;
+
+
+	b = b*10 + a % 10; (b当前值向前进一位 +a当前的个位) b =4321
+	a = parseInt(a / 10) 去掉a个位a = 1; a = 0结束(a不等于0才执行循环语句)
+
+
+	*/
+
+
+	// 的到用户输入
+	var num = parseInt(prompt("请输入数字"));
+	// 调用函数
+	console.log(rev(num));
+	function rev(a) {
+		// 用户输入a 返回a倒置数b
+		var b = 0;
+		for(; a != 0 ; ) {
+			b = b * 10 + a % 10;
+			a = parseInt(a / 10);
+		}
+		return b;
+	}
+
+
+	</script>
+</body>
+</html>

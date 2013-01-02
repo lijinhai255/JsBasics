@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	/*
+	累加器：
+	1累加器变量sum，声明必须书写在循环语句外面，初始值0
+	2累加器中间赋值过程，根据实际不一定是++
+	3最终结果在循环语句外面输出
+	*/
+
+	// 的到用户输入
+	var num = parseInt(prompt("请输入数字"));
+	// num = 6
+	// 累加器初始值
+	var sum = 0;
+	// 循环语句
+	for(var i = 2; i <= num ; i ++) {
+		sum += (i + 1) / i;
+	}
+	// 结果在循环外面输出
+	console.log(sum);
+
+	/*
+	如果用户输入num = 5
+	sum = 0
+	i=2，i<=5真，sum = sum + 3 /2 = 0 + 3/2;
+	i=3，i<=5真，sum = 0 + 3/2 + 4 / 3;
+	i=4，i<=5真，sum = 0 + 3/2 + 4 / 3 + 5 / 4;
+	i=5，i<=5真，sum = 0 + 3/2 + 4 / 3 + 5 / 4 + 6 /5;
+	i=6,i<=5假结束循环执行后面的 语句
+	console.log(sum)
+	console.log(3/2 + 4 / 3 + 5 / 4 + 6 /5)
+
+
+	*/
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

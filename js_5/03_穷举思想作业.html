@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+/*
+3苹果3元一个，鸭梨2元一个，桃子1元一个。现在想用200元买100个水果，在控制台中列出所有可能性。
+苹果x   i
+梨y		j
+桃z		k
+*/
+// for(var i = 0; i <= 100 ; i ++) {
+// 	for(var j = 0 ; j <= 100 ; j ++ ) {
+// 		for(var k = 0 ; k <= 100 ; k ++) {
+// 			// 限制if
+// 			if(3 * i + 2 * j + k == 200 && i + k + j == 100) {
+// 				console.log(i,j,k);
+// 			}
+// 		}
+// 	}
+// }
+
+
+// 你多想，计算快
+// 极限
+for(var i = 0 ; i <= 50; i ++) {
+	for(var j = 0 ; j <= 100 - i ; j ++) {
+		// 限制
+		if(3 * i + 2 * j + (100 - i - j ) === 200) {
+			console.log(i,j,100 - i - j);
+		}
+	}
+}
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

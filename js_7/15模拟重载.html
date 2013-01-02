@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	/*
+	同一个函数，参数不同实现不同的功能。
+	当实际参数是2个，表示两个数值相加；
+	当实际参数是3个，表示前两个较大值和第三个数相加。
+	如果实际参数是其他个数，报错
+	*/
+
+
+	// 声明函数
+	// function sum(a,b,c) {
+	// 	if(arguments.length == 2) {
+	// 		return a + b;
+	// 	}else if(arguments.length == 3) {
+	// 		return a > b ? a : b + c;
+	// 	}else {
+	// 		return "输入有误";
+	// 	}
+	// }
+
+
+	// switch语句
+	function sum(a,b,c) {
+		switch(arguments.length) {
+			case 2:
+				return a + b;
+				break;
+			case 3:
+				return (a < b ? b : a) + c;
+				break;
+			default:
+				throw new Error("参数有误");
+		}
+	}
+
+
+	// 调用
+	console.log(sum(2,4));
+	console.log(sum(2,4,10));
+	console.log(sum(1));
+
+	
+
+
+
+
+
+
+
+
+
+
+ 	
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

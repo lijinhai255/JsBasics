@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	/*
+	盈数除去它本身以外的一切约数的和大于它本身。与完美数类似。
+	使用函数方法编写一段程序。
+	输出1~100的所有盈数。
+	输出100以内所有的盈数 → 判断是不是盈数 → 求约数和
+	*/
+
+
+	// 输出100以内所有的盈数
+	// 一一列举
+	for(var i = 1 ; i <= 100 ; i ++) {
+		// 判断i是盈数输出
+		// 先调用函数
+		if(isYs(i)) {
+			console.log(i);
+		}
+	}
+
+
+	// 判断盈数
+	// 参数：输入一个数字，
+	// 返回值：的到布尔值
+	// 使用function关键字什么函数
+	function isYs(a) {
+		// 输入a返回true/false
+		if(yueshuhe(a) > a) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+
+
+
+	// yueshuhe函数
+	// 参数：一个数字
+	// 返回值：该数字除了本身之外所有约数的和
+	function yueshuhe(b) {
+		// 累加器
+		var sum = 0;
+		// 找b约数
+		for(var i = 1 ; i < b ; i ++) {
+			// i是约数则sum +=
+			if(b % i == 0) {
+				sum += i;
+			}
+		}
+		return sum;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

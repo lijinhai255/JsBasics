@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	// 注意：循环变量必须书写在循环语句外面
+	// 循环变量
+	// var i = 3;
+	// while(i < 13) {
+	// 	console.log(i);
+	// 	i += 4;
+	// }
+	// console.log(i + "结束");
+	/*
+	i=3，i<13真，执行循环语句输出3，i+=4
+	i=7,i<13真，执行循环语句输出7，i+=4
+	i=11,i<13真，执行循环语句输出11，i+=4
+	i=15,i<13假，结束循环
+	执行后面的语句输出15结束
+	*/
+
+
+	// while语句都可以改为for
+	// for(var i = 3; i < 13 ; i += 4) {
+	// 	console.log(i);
+	// }
+	// console.log(i + "结束");
+	/*
+	i=3,i<13真，执行循语句输出3
+	i=7,i<13真，输出7
+	i=11,i<13真，输出11
+	i=15,i<13假，结束循环
+	执行后面的语句
+	输出15结束
+	*/
+
+
+
+
+	// while输出语句位置很重要
+	var i = 3;
+	while(i < 13) {
+		i += 4;
+		console.log(i);
+	}
+	console.log("结束");
+	/*
+	i=3,i<13真，i=7,输出7
+	i=7,i<13真，i=11,输出11
+	i=11,i<13真，i=15,输出15
+	i=15,i<13假，结束循环
+	*/
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

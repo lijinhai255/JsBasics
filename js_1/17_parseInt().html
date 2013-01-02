@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	// parseInt()将字符串转为整数
+	// 参数书写要转换的字符串
+	console.log(typeof "12.12");
+	console.log(parseInt("12.12"));
+	console.log(parseInt("0.1222"));
+	console.log(parseInt("12你好"));
+	console.log(parseInt("1世界2"));
+	console.log(typeof parseInt("12.12"));
+
+
+	// parseInt()结果可能是NaN
+	console.log(parseInt("世界12"));
+	console.log(typeof parseInt("世界12"));
+
+
+	// parseInt(字符串，进制参数)
+	console.log(parseInt("10",10));
+	console.log(parseInt("10",8));
+	console.log(parseInt("10",16));
+
+
+
+	// parseFloat()将字符串转为浮点数
+	console.log(parseFloat("12.12你好"));
+	console.log(typeof parseFloat("12.12你好"));
+	console.log(parseFloat("0.12.121.12.22."));
+	console.log(parseFloat(".12.121.12.22."));
+	// e是计算法不是普通字母
+	console.log(parseFloat(".12e12.494jgtjigjigj"));
+	console.log(parseFloat(".12a12.494jgtjigjigj"));
+	// 特殊结果
+	console.log(parseFloat("nihao1.0"));
+	</script>
+</body>
+</html>

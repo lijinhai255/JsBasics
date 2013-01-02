@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	// 声明数组，一般数组中每一项使用相同数据类型
+	var arr1 = [1,2,3,4,5,5,6,7,78,8];
+	// 数组数据类型typeof
+	console.log(typeof arr1);
+
+
+	// 简单数据类型保存的值赋值不互相
+	// 引用数据类型保存的地址，赋值之间互相影响
+	var arr2 = arr1;
+	// 改变arr2
+	arr2[3] = 3000;
+	console.log(arr2);
+	// 改变2测试1影响吗？
+	console.log(arr1);
+
+
+
+	// length属性  arr.length表示数组中数据个数
+	console.log(arr1.length);
+	// 数组最后索引值arr.length - 1
+	// 读取数组最后一项
+	console.log(arr1[arr1.length - 1]);
+
+
+
+
+	// length可以强制将数组拉长，没有赋值undefined
+	// arr1.length = 20;
+	// console.log(arr1);
+	// console.log(arr1.length);
+
+
+
+
+	// 可以通过索引值强制将数组拉长
+	arr1[20] = 20;
+	console.log(arr1);
+	console.log(arr1.length);
+
+
+
+
+
+
+	</script>
+</body>
+</html>

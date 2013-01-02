@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	/*
+	1.将用户输入的网址全部转化成我们的官网。如www.baidu.com=>www.icketang.com
+	使用Match函数
+	小括号有了就一定有编码  但是可以不用
+	*/
+	var url = prompt("请输入网址");
+	// replace(要匹配的字符串，要替换的字符串)第二个参数可以使用Match函数
+
+	// match函数形参 一个必须是match，其他是小括号编码有一个小括号必须书写一个编码不能省略
+	url = url.replace(/^(w{3}\.)(\w+)(\.com)$/,function (match,$1,$2,$3) {
+		return $1 + "icketang" + $3;
+	});
+
+	console.log(url);
+
+	</script>
+</body>
+</html>

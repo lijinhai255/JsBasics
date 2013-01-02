@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	// []字符集表示可能性 一个[]一次只能匹配一个字符可能性
+
+
+	// 简单类，将所有的可能性直接书写在[]中
+	//  [abc]可以匹配a可以匹配b可以匹配c不能匹配abc
+	// xax   xbx   xcx
+ 	console.log("axaxbcxbxjdsxcxslxbcaxsl".match(/x[bca]x/g));
+ 	// 范围类 [a-z]表示所有的小写字母 [0-9]所有的数字 [A-Z]
+ 	console.log("axaxbcxbxjdsxcxslxbcaxsl".match(/x[a-z]x/g));
+ 	// 组合类 将不同范围组合一起[a-z0-9]  [a-zA-Z]
+ 	console.log("axaxbcx9xjdsxcxslxbcaxsl".match(/x[a-z0-9]x/g));
+
+
+ 	// 负向类 [^]表示不可能是中括号里面的所有字符 [a-z]小写字母 [^a-z]不能是小写字母
+ 	console.log("axAxbcx9xjdsxcxslxbcaxsl".match(/x[^a-z]x/g));
+
+	</script>
+</body>
+</html>

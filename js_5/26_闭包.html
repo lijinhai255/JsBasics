@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	// 闭包并不是一成不变的，闭包可以记住最新值
+	function outer() {
+		var a = 10;
+		function inner() {
+			a ++;
+			console.log(a);
+		}
+		return inner;
+	}
+	// inner函数闭包：外部环境a =10 内部语句a++,console.log(a);
+	var i = outer();
+	i();
+	i();
+	i();
+	i();
+
+
+	
+
+
+	
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

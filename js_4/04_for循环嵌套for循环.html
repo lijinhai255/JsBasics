@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	// for循环嵌套循环变量不能相同
+	for(var i = 1; i < 4 ; i ++) {
+		for(var j = 1; j < 4; j ++) {
+			console.log(i,j);
+		}
+	}
+	console.log(j);
+	/*
+	i=1,i<4真，进入1层循环j=1,j<4真进入2层输出1,1执行j++
+						  j=2，j<4真进入2层输出1,2执行j++
+						  j=3，j<4真进入2层输出1,3执行j++
+						  j=4，j<4假结束2层，执行i++
+	i=2,i<4真，进入1层循环j=1，j<4真进入2层输出2,1,执行j++
+						  j=2，j<4真进入2层输出2,2,执行j++
+						  j=3，j<4真进入2层输出2,3,执行j++
+						  j=4，j<4假，结束j循环，执行i++
+
+	i=3,i<4真，进入1层循环j=1，j<4真进入2层输出3,1,执行j++
+						  j=2，j<4真进入2层输出3,2,执行j++
+						  j=3，j<4真进入2层输出3,3,执行j++
+						  j=4，j<4假，结束j循环，执行i++
+	i=4,i<4假，结束i循环,把控制权交给i后面的语句输出j=4
+	*/
+ 
+
+	</script>
+</body>
+</html>

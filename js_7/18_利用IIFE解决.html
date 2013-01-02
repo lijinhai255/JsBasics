@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	// 想让数组保存10个函数
+	// 声明数组
+	var arr = [];
+	// i全局变量
+	for(var i = 0 ; i < 10 ; i ++) {
+		// i表示索引值
+		(function(a) {
+			arr[a] = function() {
+				return a;
+			}
+		})(i);
+	}
+	// i = 10
+	console.log(i);
+	console.log(arr);
+	console.log(arr[0]);
+	console.log(arr[0]());
+	console.log(arr[9]());
+	console.log(arr[8]());
+
+
+
+
+
+
+
+
+
+ 	
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

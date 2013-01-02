@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	/*清除默认样式*/
+	* {
+		padding: 0;
+		margin: 0;
+	}
+	div {
+		width: 200px;
+		height: 200px;
+		margin-bottom: 10px;
+		background-color: lightblue;
+	}
+	p {
+		width: 100px;
+		height: 100px;
+		background-color: red;
+	}
+
+	</style>
+	
+</head>
+<body>
+	<div>1</div>
+	<div>2</div>
+	<div>3</div>
+	<div>4</div>
+	<div>
+		<div>
+			<div>
+				<div>我说好多层的div</div>
+			</div>
+		</div>
+	</div>
+	<div class="box" id="box">
+		<p>我是p</p>
+	</div>
+	<script type="text/javascript">
+	// 通过标签名获取
+	// 调用对象可以是document
+	var divs = document.getElementsByTagName("div");
+	// 的到是类数组对象
+	console.log(divs);
+	// 可以使用length表示保存元素对象个数
+	// 不管元素嵌套不深都可以查找到
+	console.log(divs.length);
+	// 可以通过索引值读取，每一项保存的是元素对象
+	var oDiv = divs[2];
+	// 更改第三个div背景颜色
+	oDiv.style.backgroundColor = "red";
+
+
+	// 调用对象可以元素对象
+	var oBox = document.getElementById("box");
+	// 当元素只有一个时也必须书写索引值才可以的到元素对象
+	var oPara = oBox.getElementsByTagName("p")[0];
+	oPara.style.backgroundColor = "green";
+
+
+	console.log(oDiv);
+	// 可以使用length属性
+
+
+
+
+
+
+	
+	</script>
+</body>
+</html>

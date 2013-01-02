@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	// 用户输入分数，判断是否大于等于60。（1种 大于等于 60； 2种小于60）
+
+
+	// 的到用户输入
+	var num = parseInt(prompt("请输入你的分数"));
+	if(num >= 60) {
+		// num >= 60结果是true,满足条件表示式，执行才结构体
+		console.log("你非常不错");
+		console.log("及格");
+	}else {
+		// 隐含含义 num < 60,
+		// num >= 60 不满足条件表达式执行该结构体
+		console.log("分数有点低");
+		console.log("认真去练习");
+	}
+
+	/*
+	当用户输入num = 80
+	条件表达式计算自动计算  80 >= 60 结果是true满足，
+	只要满足条件，执行if后面的结构体，else后面的结构不会执行
+
+
+
+	当用户输入num = 35；
+	计算计算表达式 num >= 60 ，结果是false 不满足条件，那么只执行else后面的结构体，
+	if后面的结构体并不会执行。
+	*/
+
+	
+
+
+
+
+	</script>
+</body>
+</html>

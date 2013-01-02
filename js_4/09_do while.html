@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	// do while后测试，先执行循环语句再判断条件
+	// 注意循环变量必须书写在循环语句的外面
+	var i = 3;
+	do {
+		console.log(i);
+		i += 3;
+	}while(i < 15);
+	console.log(i + "结束");
+
+	/*
+	i=3,先执行循环体输出3,i=6，再判断循环条件，如果满足再次循环i<15
+					输出6,i=9,判断循条件，满足再次循环
+					输出9,i=12，判断条件,满足再次循环
+					输出12，i=15,判断i<15假，立即结束整个循环
+					执行后面的语句
+					输出i结束
+	*/
+
+
+
+
+	</script>
+</body>
+</html>

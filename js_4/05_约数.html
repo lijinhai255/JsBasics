@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	/*
+	案例1：在控制台输出一个数的所有约数。
+	约数概念：a %b ==0，那么a叫做b的倍数，b叫做a的约数或者因数。
+	一个数的约数，最小是1，最大是它本身。
+	比如输出12所有的约数
+	1,2,3,4,6，12
+	可能性：约数1-本身之间所有的数字都有可能是约数  一一列举for
+	判断：if进行限制
+	*/
+
+
+	// 的到用户输入
+	var num = parseInt(prompt("请输入整数"));
+	// 对于num，约数的所有可能性是1-num之间
+	for(var i = 1; i <= num ; i ++) {
+		// 一一列举
+		// 只想要特定的数字，通过if进行限制
+		// 求num的约数
+		if(num % i === 0) {
+			// 满足条件才输出
+			console.log(i);
+		}
+	}
+ 
+
+	</script>
+</body>
+</html>

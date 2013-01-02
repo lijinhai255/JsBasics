@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	function outer() {
+		// 外部环境，变量作用域
+		var a = 1;
+		function inner() {
+			// 内部语句：函数内部使用的语句
+			console.log(a);
+		}
+		// inner不添加小括号表示函数定义语句
+		// console.log(inner);
+		// 调用outer()返回的inner函数的定义
+		return inner;
+	}
+	// 声明变量
+	// inner函数赋值fun变量;
+	var fun = outer();
+	fun();
+
+	
+
+
+	
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

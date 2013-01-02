@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	/*
+	案例2：找三位数里的“水仙花数”，在控制台输出。
+	条件1：三位数，得全部列举出来100,~999（水仙花所有可能性是100-999）
+	条件2：水仙花数，每一个位数的三次方，他们的和，还等于原来的三位数通过判断找到符合条件的水仙花数
+
+	123 
+	123 是否等于 1 + 8 + 27 
+	*/
+
+
+
+	// 1将所有的三位数一一列举
+	for(var i = 100; i < 1000 ; i ++) {
+		// 只将水仙花输出
+		// i = 123,判断123是否是水仙花
+		// 声明个位，十位，百位
+		var ge = i % 10;
+		var shi = parseInt(i / 10) % 10;
+		var bai = parseInt(i / 100);
+		// 声明sum
+		var sum = Math.pow(ge,3) + Math.pow(shi,3) + Math.pow(bai,3);
+		if(sum === i) {
+			console.log(i);
+		}
+	}
+ 
+
+	</script>
+</body>
+</html>

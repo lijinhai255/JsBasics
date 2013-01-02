@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	// 闭包并不是一成不变的,如果外部环境发生改变，闭包一样可以查看到
+	// 函数每一次调用都产生一个全新闭包
+	function outer() {
+		var a = 10;
+		function inner() {
+			a ++;
+			console.log(a);
+		}
+		return inner;
+	}
+
+	// 只有outer()调用才会产生一个全新闭包
+	// fun是一个整体  fun2是另外一个整体互不影响
+	var fun = outer();
+	var fun2 = outer();
+	fun();
+	fun();
+	fun();
+	fun();
+	fun2();
+	fun2();
+	fun2();
+	fun2();
+	fun2();
+	fun();
+
+	</script>
+</body>
+</html>

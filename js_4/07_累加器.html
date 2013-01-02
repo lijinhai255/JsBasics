@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	/*
+	判断任何数字是不是质数
+	质数：一个数字除了1和他本身没有其他约数（约数总个数2）
+	1不是质数
+	*/
+
+
+	// 用户输入
+	var num = parseInt(prompt("请输入数字"));
+
+	// 累加器声明变量，必须书写在for循环外，初始值是0
+	var sum = 0;
+	// 找num约数，有一个约数sum+1
+	for(var i = 1; i <= num; i ++) {
+		// 判断i是不是num的约数
+		if(num % i === 0) {
+			// i是约数
+			// 有一个满足的数字sum+1
+			sum ++;
+		}
+	}
+	// 结果在最后输出
+	console.log(sum);
+	// 判断是不是质数，如果sum是2那么num是质数如果不是2那么不是质数
+	if(sum == 2) {
+		console.log(num + "是质数");
+	}
+ 
+
+
+	</script>
+</body>
+</html>

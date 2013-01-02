@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>html操作</title>
+</head>
+<body>
+	<div class="box" id="box" data-ming="hezi" style="width: 100px;height: 200px; background-color: lightblue;">盒子</div>
+	<script type="text/javascript">
+	// 获取元素
+	var oBox = document.getElementById("box");
+	console.log(oBox);
+	// class id自带属性   data-ming自定义属性
+	console.log(oBox.id);
+	// console.log(oBox.data-ming);
+	console.log(oBox.dataMing);
+	// 点语法只能读，设置自带属性   get可以读取自带属性可以读取自定义属性
+	console.log(oBox.getAttribute("id"));
+	console.log(oBox.getAttribute("data-ming"));
+
+
+
+	// 点语法需要改名，get不需要
+	console.log(oBox.className);
+	console.log(oBox.getAttribute("class"));
+
+
+
+	// 点语法读取style属性时得到是对象。get得到是字符串
+	console.log(typeof oBox.style);
+	console.log(oBox.style);
+	console.log(typeof oBox.getAttribute("style"));
+
+
+	// 点语法的到style对象可以继续打点(单一属性需要改为驼峰)，get不可以,
+	console.log(oBox.style.backgroundColor);
+	console.log(oBox.getAttribute("style").backgroundColor);
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

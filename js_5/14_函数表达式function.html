@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+	// fun();
+	function fun() {
+		console.log(1);
+	}
+	// fun();
+	var fun = function() {
+		console.log(2);
+	};
+	fun();
+	/*
+	预解析：
+	先提升function关键字
+	function fun(){};  声明var fun;
+	提升变量fun，只提升声明不提升赋值，赋值语句保存在原位置
+	
+	执行：
+	fun()  
+	fun = function(){2};
+	*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

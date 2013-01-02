@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	// js中只有函数能够关住变量作用域
+	// for语句不能关住变量的作用域，循环变量是全局变量
+
+	// i是全局变量
+	for(var i = 10; i < 20 ; i ++) {
+		console.log(i);
+	}
+
+
+	console.log(i);
+	function fun() {
+		console.log(i);
+	}
+	fun();
+
+
+	</script>
+</body>
+</html>

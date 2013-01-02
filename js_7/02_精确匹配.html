@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	// 检测字符串中是否含有abc  /abc/表示是匹配字符串组合模式中只有a,b,c这三个字符，并且这是三个字符只能是abc紧密相连不能出现任何其他字符，顺序也不能颠倒。
+	console.log(/abc/.test("abcjde"));
+	console.log(/abc/.test("bacjde"));
+	</script>
+</body>
+</html>

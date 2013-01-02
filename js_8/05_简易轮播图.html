@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	/*清除默认样式*/
+	* {
+		padding: 0;
+		margin: 0;
+	}
+	.box {
+		width: 200px;
+		height: 100px;
+		background-color: lightblue;
+		margin-bottom: 20px;
+	}
+	
+
+	</style>
+	
+</head>
+<body>
+	<input type="button" id="btn1" value="上一张">
+	<img src="images/lunbo/1.jpg" alt="" width="300" id="pic">
+	<input type="button" id="btn2" value="下一张">
+	<script type="text/javascript">
+	// 获取元素对象
+	var oPic = document.getElementById("pic");
+	var oBtn1 = document.getElementById("btn1");
+	var oBtn2 = document.getElementById("btn2");
+
+	// 信号量一定全局变量  idx有效值1,2,3,4,5,
+	var idx = 1;
+
+	// 点击btn2，换图
+	oBtn2.onclick = function() {
+		// 1信号量改变
+		idx ++;
+		// 2信号量验证
+		if(idx > 5) {
+			idx = 1;
+		}
+		console.log(idx);
+		// 3体现在元素身上
+		oPic.src = "images/lunbo/" + idx + ".jpg";
+	};
+
+
+	// 点击btn1，换图
+	oBtn1.onclick = function() {
+		//1信号量改变
+		idx --;
+		//2验证信号量
+		if(idx < 1) {
+			idx = 5;
+		}
+		console.log(idx);
+		// 3体现在元素身上
+		oPic.src = "images/lunbo/" + idx + ".jpg";
+	};
+	</script>
+</body>
+</html>

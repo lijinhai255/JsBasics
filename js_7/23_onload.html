@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>html操作</title>
+	<style type="text/css">
+	/*清除默认样式*/
+	* {
+		padding: 0;
+		margin: 0;
+	}
+	.box {
+		width: 300px;
+		height: 300px;
+		background-color: red;
+		color: #fff;
+		font-size: 30px;
+	}
+	.btn {
+		display: block;
+		width: 200px;
+		height: 80px;
+		background-color: lightblue;
+		text-align: center;
+		line-height: 80px;
+		text-decoration: none;
+		font-size: 30px;
+	}
+
+	</style>
+	<script type="text/javascript">
+	// 当标签加载完毕之后再执行我们的函数onload
+	window.onload = function() {
+		// 绑定事件  元素对象.事件名 = 匿名函数;
+	// 只有触发事件，函数会立即执行，千万不要书写小括号
+
+
+	// 获取元素对象
+	var oBox = document.getElementById("box");
+	var oPic = document.getElementById("pic");
+	var oBtn = document.getElementById("btn");
+	var oIpt = document.getElementById("ipt");
+
+	console.log(oBox);
+	// 双击盒子，改变内部文本
+	oBox.ondblclick = function() {
+		oBox.innerHTML = "双击";
+	};
+
+	// 鼠标进入图片换成小明
+	oPic.onmouseenter = function() {
+		oPic.src = "images/xiaoming.png";
+	};
+
+	// 鼠标离开换回
+	oPic.onmouseleave = function() {
+		oPic.src = "images/baby.png";
+	};
+
+
+	// 鼠标按下，改变盒子背景颜色
+	oBtn.onmousedown = function() {
+		oBox.style.backgroundColor = "red";
+	};
+
+	// 鼠标弹起，变回
+	oBtn.onmouseup = function() {
+		oBox.style.backgroundColor = "lightblue";
+	};
+
+
+	// 表单获取焦点，默认文本是空字符串
+	oIpt.onfocus = function() {
+		oIpt.value = "";
+	}
+
+	// 失去焦点
+	oIpt.onblur = function() {
+		oIpt.value = "表单";
+	}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</head>
+<body>
+	<div class="box" id="box" data-ming="hezi" style="width: 100px;height: 200px; background-color: lightblue;">盒子</div>
+	<img src="images/baby.png" alt="" id="pic">
+	<a href="" class="btn" id="btn">按钮</a>
+	<input type="text" id="ipt" value="表单"></body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	// js中只有函数能够关住变量作用域
+	// a没有在函数内部声明，可以在任何地方使用
+	var a = 10;
+	function fun() {
+		// 函数
+		// 函数内部可以使用a
+		console.log(a);
+
+		// 在函数内部声明b
+		var b = 20;
+		// 只能在函数内部使用
+		console.log(b);
+	}
+	// console.log(a);
+	// 调用
+	fun();
+	// 在函数外部不能使用内部的b
+	console.log(b);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

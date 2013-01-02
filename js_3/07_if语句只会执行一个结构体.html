@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	// 用户输入是数字
+	var num = parseInt(prompt("请输入小于10的数字"));
+	if(num < 3) {
+		num += 2;
+	}else if(num < 5) {
+		++ num;
+	}else if (num < 7) {
+		num += 3;
+	}else {
+		num += 4;
+	}
+	// 这是殊途同归语句
+	console.log(num);
+	/*
+	输入2，num<3满足执行结构体 num ++ 2,num = 4跳出if语句不会反复执行
+
+	执行if语句后面的其他js语句输出console.log(num)；
+
+	*/
+
+
+	</script>
+</body>
+</html>

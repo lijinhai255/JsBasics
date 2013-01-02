@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	// function声明函数可以进行提升，先使用在声明不会报错
+	// 先调用函数
+	fun();
+	// 声明使用function关键字
+	function fun() {
+		console.log(1);
+	}
+
+
+
+
+	// 先使用函数
+	fun2();
+	// 声明函数表达式
+	var fun2 = function() {
+		console.log(2);
+	};
+	/*
+	预解析：
+	var fun2;
+	fun2();
+	fun2 = function(){};
+	*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

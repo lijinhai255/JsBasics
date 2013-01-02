@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	// 不同的作用域内有相同变量名
+	// 声明函数并不会执行，必须调用
+	var a = 1;
+	function fun1() {
+		var a = 2;
+		function fun2() {
+			var a = 3;
+			// 本作用域内有a定义，直接使用a =3
+			console.log(a);
+			function fun3() {
+				// a本作用域内没有a声明，从本层依次向外查找a =3
+				console.log(a);
+			}
+			fun3();
+		}
+		fun2();
+	}
+	fun1();
+	// 本层作用域有定义直接使用a =1
+	console.log(a);
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

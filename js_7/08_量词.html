@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	// {} 表示匹配字符连续出现的次数
+	// {n} 字符连续出现n次  表示a字母连续出现3次
+	console.log("aaajaaaaaakkaakaaaaaaaaaaaaaaaaaaa".match(/a{3}/g));
+	// {n,m}次数n-m之间包括n，m   a至少3次最多不能超过8次
+	console.log("aaajaaaaaakkaakaaaaaaaaaaaaaaaaaaa".match(/a{3,8}/g));
+	// {n,}至少出现n次
+	console.log("aaajaaaaaakkaakaaaaaaaaaaaaaaaaaaa".match(/a{3,}/g));
+
+	// + 表示{1,}
+	console.log("aaajaaaaaakakaakaaaaaaaaaaaaaaaaaaa".match(/a+/g));
+	// ？ {0,1} 
+	console.log("xyvvvxayjjxaaay".match(/xa{0,1}y/g));
+	console.log("xyvvvxayjjxaaay".match(/xa?y/g));
+	//  * 任意 {0,} 任意次
+	console.log("xyvvvxayjjxaaay".match(/xa*y/g));
+
+
+
+
+
+
+
+
+
+ 	
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

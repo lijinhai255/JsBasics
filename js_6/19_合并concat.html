@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	// 字符串
+	var str = "今天 大风，日期是26号。";
+	// concat()参数书写要合并的字符串
+	// 返回值：合并后新字符串
+	var str2 = str.concat("赶快来暖气吧。");
+	console.log(str2);
+	// 原字符串不改变
+	console.log(str);
+
+
+
+	// slice(start,end)截取方法
+	// start表示截取开始索引值，end表示截取结束的索引值不包括end
+	// 返回值：截取到的新字符串
+	// 原字符串不改变
+	var str3 = str.slice(3,6);
+	console.log(str3);
+	console.log(str);
+
+
+
+	// 还可以使用负数表示倒数从-1开始
+	console.log(str.slice(-4,-2));
+	console.log(str);
+
+
+	// 省略end表示截取到最后
+	console.log(str.slice(-4));
+	console.log(str);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

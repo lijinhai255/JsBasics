@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	waiceng: for(var i = 1; i < 4 ; i ++) {
+		for(var j = 1; j < 4 ; j ++) {
+			if(j == 2) {
+				console.log(i,j);
+				// 让break控制i循环，不控制J循环
+				break waiceng;
+			}
+		}
+	}
+	console.log("结束");
+	/*
+	i=1,i<4真,执行i循环j=1,j<4真，执行j循环，j==2不满足结束if
+					   j=2,j<4真，执行j循环，j==2满足执行if结构体输出1,2执行break waiceng；立即结束i整个循环
+	执行for后面的语句输出结束
+	*/
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

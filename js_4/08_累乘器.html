@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	// 用户输入数字
+	var num = parseInt(prompt("请输入数字"));
+	// 累乘器变量也是必须书写在for循环外面
+	// 初始值设置1
+	var cheng = 1;
+	// 求num阶乘
+	for(var i = num ; i >= 1 ; i --) {
+		// 一一列举
+		cheng *= i;
+	}
+	// 最终结果书写在for循环
+	console.log(num + "的阶乘是" + cheng);
+
+
+
+
+	</script>
+</body>
+</html>

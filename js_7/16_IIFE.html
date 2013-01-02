@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	// 声明函数  IIFE在声明函数之后立即调用
+	// function fun() {
+	// 	console.log(1);
+	// }();
+
+	// // 调用
+	// fun();
+
+
+	// 函数表达式
+	// var fun = function() {
+	// 	console.log(1);
+	// }();
+
+
+	// 在function前面添加+ - ！ ()将function转为函数表达式
+	+function fun() {
+		console.log(1);
+	}();
+	
+	-function fun() {
+		console.log(1);
+	}();
+
+	!function fun() {
+		console.log(1);
+	}();
+
+	// 第一个小括号表示转为函数表达式，第二个小括号表示调用
+	(function fun() {
+		console.log(1);
+	})();
+
+
+	// IIFE 书写
+	(function () {
+		console.log(2);
+	})();
+
+
+	// IIFE可以关住函数的作用域，不能在IIFE外面使用
+	(function fun2() {
+		console.log(3);
+	})();
+
+	// 调用fun2
+	// fun2();
+
+
+
+
+	// IIFE实际参数书写在调用小括号中
+	// (function (a,b) {
+	// 	console.log(a + b);
+	// })(1,20);
+
+
+	// IIFE中如果有return 可以作为具体数据参与运算
+	function sum(a,b,c) {
+		return c + (function() {
+			return a > b ? a : b;
+		})();
+	}
+	console.log(sum(1,3,4));
+
+
+
+
+
+
+
+
+
+
+ 	
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

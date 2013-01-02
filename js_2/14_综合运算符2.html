@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	/*
+	综合运算顺序： 先算贴身(++,) 数学，比较，逻辑，赋值
+	数学：隐式转换 true 1   false 0  null 0
+	逻辑顺序：非 与 或
+
+	短路语法：a &&b , a真(非0数字，非空字符串)，结果b
+			  a || b,a真，结果是a
+
+	*/
+	var a = 4;
+	var sum = 1 + 2 && 3 * ++a % 5 || 6 < 7 == 8 / !false;
+	/*
+			= 1 + 2 && 3 * 5 % 5 || 6 < 7 == 8 / true;
+			= 3 && 0 || 6 < 7 == 8
+			= 3 && 0 || true == 8
+			= 3 && 0 || false
+			= 0 || false
+			= false
+	*/
+	console.log(sum);
+	console.log(a);
+
+
+
+
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	// 编写程序
+	// 1 从目的出发进行分析   让用户输入税前工资，弹出对应的公积金数额。
+	// 用户输入  程序员需要将结果输出
+
+
+
+	// 的到用户输入prompt ，一般用变量进行接收
+	// prompt的到的字符串类型，将字符串转为number parseInt,parseFloat
+	var a = parseInt(prompt("请输入税前工资"));
+	// 检测a数据类型
+	console.log(typeof a);
+
+	// 声明变量b接收公积金数额
+	var b = a * 0.1 * 2;
+
+	// 弹出对应的公积金
+	// alert() 小括号书写参数，书写要弹出的内容
+	// 想弹出的内容是“用户工资是：**元，对应的公积金是*** 元。”;
+	// + ：js中+作用的是拼接
+	// 只有字符串才有双引号。
+	alert("用户工资是\:" + a + "元，对应的公积金是" + b + "元");
+
+
+
+	</script>
+</body>
+</html>

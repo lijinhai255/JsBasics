@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	// 分组  ()表示一个整体
+	console.log("abccchhhabcabcabc".match(/(abc){3}/g));
+	// 分组匹配的字符串再次使用可以用\编码表示  一个小括号对应一个数字1,2,3,4
+	// \1再次使用前面匹配到的字符串
+	console.log("abccchhhabcabcabc".match(/([a-z]{3})/g));
+	console.log("abccchhhabcabcabc".match(/([a-z]{3})\1/g));
+	console.log("abccchhhabc121212abc".match(/([a-z]{3})(\d{2})\2/g));
+	console.log("abccchhhabc121212abc".match(/([a-z]{3})(\d{2})\2{2}/g));
+	console.log("abccchhhabc121212abc".match(/[a-z]{3}(\d{2})\1{2}/g));
+
+
+
+
+	// 还可以在正则表达式外面使用 $编码replace(a,b)
+	// 将123*456替换成456*123
+	var str = "123*456";
+	str = str.replace(/([0-9]{3})\*(\d{3})/,"$2*$1");
+	console.log(str);
+
+
+
+
+	// replace()方法第二个参数可以书写成匿名函数match函数。可以对字符串进一步
+	// match（）有形式参数，一个形参必须是match，其他形参依次书写$编码，有几个小括号书写几个参数，不能省略，但是可以不用
+	var str2 = "123*456*789";
+	str = str.replace(/^([0-9]{3})\*(\d{3})\*(\d{3})$/,function (match,$1,$2,$3){
+		return $2 + "*" + $1;
+	});
+
+	console.log(str);
+
+
+
+
+
+
+
+
+
+ 	
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

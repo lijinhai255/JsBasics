@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	// 用户输入星座，弹出对应的星座
+	// 输入星座
+	var xingzuo = prompt("请输入星座");
+	switch(xingzuo) {
+		// case后面书写对应的具体值用空格隔开
+		// 在冒号后面书写匹配成功要执行的语句不用书写大括号
+		case "白羊座":
+			alert("这是白羊座");
+			alert("1");
+			// break  js关键字。有特殊功能的单词。
+			break;
+		case "双鱼座":
+			alert("这是双鱼");
+			break;
+		case "金牛座":
+			alert("这是金牛");
+			break;
+		// default表示以上数值都不匹配，执行default对应的语句
+		// 类似else语句
+		// default:
+			// alert("没有你输入的星座");
+			// break;
+	}
+	alert("查看完毕");
+
+	/*
+	用户输入白羊座，xingzuo = "白羊座"
+	匹配成功第一个case执行后面的语句，从上到下
+	弹出"我是白羊"
+	弹出“1”
+	执行break,执行break结束整个switch语句，执行switch后面的其他js语句
+	弹出"完毕"
+
+
+
+
+
+	default:也是关键字 表示以上case都不满足执行后面的语句
+	当用户输入双子座，没有匹配case执行default后面的语句
+	弹出"么有"
+	执行break，结束switch语句
+	才执行switch后面的其他js语句
+	弹出“完毕”
+	
+	*/
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

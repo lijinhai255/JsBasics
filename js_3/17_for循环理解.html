@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	// i循环变量是全局变量
+	// var i = 3;
+	// for(; i < 10 ; i += 2) {
+	// 	console.log(i);
+	// }
+	/*
+	i=3, i<10真，执行循语句输出3
+	i=5, i<10真，执行循语句输出5
+	i=7, i<10真，执行循语句输出7
+	i=9, i<10真，执行循语句输出9
+	i=11, i<10假，立即结束for循环
+	*/
+
+
+
+	// 循环条件可以任何书写
+	// for(var i = 4; i != 10 ; i += 3) {
+	// 	console.log(i);
+	// }
+	/*
+	i=4,i!=10真，执行循环语句输出4
+	i=7,i!=10真，执行循环语句输出7
+	i=10,i!=10假，立即结束循环语句
+
+	*/
+
+	// for(var i = 15; i > 5; i -= 4) {
+	// 	console.log(i);
+	// }
+	/*
+	i=15,i>5真，执行循环语句输出15
+	i=11,i>5真，执行循环语句输出11
+	i=7,i>5真，执行循环语句输出7
+	i=3,i>5假，结束for循环
+	*/
+
+
+	//循环语句有可能一次都不执行，第一次循环条件就为假
+	// var i = 3;
+	// for(console.log(i ++); i <= 3; i ++) {
+	// 	console.log("这是循环语句的" + i);
+	// }
+	/*
+	i=3，console.log(i++) 只会执行一次输出3,再次使用都是自加1后的结果
+	i<=3(i = 4)为假，结束整个for循环
+	*/
+
+
+
+	// 循环语句有可能一直重复，条件一直为真
+	// for(var i = 1; i >= 0 ; i ++) {
+	// 	console.log(i);
+	// }
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

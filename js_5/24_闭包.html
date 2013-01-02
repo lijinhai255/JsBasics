@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	function outer(x) {
+		// 对于Inner  外部环境x
+		function inner(y) {
+			// 内部语句console.log(10+y)
+			console.log(x + y);
+		}
+		// 为了让我们可以在外部使用inner
+		return inner;
+	}
+
+	// outer第一次调用Inner记住了x = 10
+	var i = outer(10);
+	// i其实就是inner函数定义
+	i();
+	// i()函数实参赋值给inner函数的y
+	i(20,30,40);
+	i(50);
+
+
+	
+
+
+	
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

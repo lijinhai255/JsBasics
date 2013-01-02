@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	// 找200以内能够被3整除的数字
+	// 200以内所有的可能性一一列举for
+	// 能够被3整除使用if限制
+	// break:找到一个满足条件的答案立即停止整个循环
+	for(var i = 1; i <= 200 ; i += 2) {
+		// 找到一个能够3整除的数字就可以
+		if(i % 3 == 0) {
+			// i一定能够被3整除；
+			console.log(i);
+			// break关键字，有功能执行break，停止整个for循环
+			break;
+		}
+	}
+	console.log(i + "结束");
+	/*
+	i=1,i<=200真，执行循语句，判断i%3==0不满足，结束if，执行if后面语句i+=2
+	i=3,i<=200真，执行循环，判断i%3==0满足，执行if后面的结构体，输出3，执行break结束整个循环语句
+	执行for后面的语句
+	输出3结束
+	*/
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

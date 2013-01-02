@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	/*
+	案例：输出1000以内的质数，模块化编程。
+	逆向思维的过程：输出1000以内的质数  →  判断是不是质数   →  找约数个数
+
+	函数：1目的return返回值，用这个函数能的到什么结果
+		  2参数      参数个数；参数含义
+	*/
+
+
+	/*
+	*1找约数个数函数
+	*返回值，我们使用这个函数的到什么？任何数字的约数总个数
+	*参数：  参数个数1；参数含义数字
+	*/
+	function yueshugeshu(a) {
+		// 我们用a，应该就是求a = 10数字约数总个数
+		// 累加器
+		var sum = 0;
+		for(var i = 1 ; i <= a ; i ++) {
+			// 找a的约数
+			if(a % i == 0) {
+				// i是是a 的约数
+				sum ++;
+			}
+		}
+		// 结果是最后输出
+		return sum;
+	}
+
+
+	/*
+	判断是不是质数
+	函数：
+	返回值：调用该函数可以的到是质数true  不是质数false
+	参数：    需要一个参数，一个数字参数
+	*/
+
+	function isZhishu(b) {
+		// 判断b是不是质数
+		if(yueshugeshu(b) == 2) {
+			// 约数个数是2个就是质数
+			return true;
+		}else {
+			return false;
+		}
+	}
+	
+
+
+	// 输出1000以内所有的质数
+	// 1一一列举所有的可能性1-1000
+	for(var i = 1 ; i <= 1000 ; i ++) {
+		// 2限制只有质数输出
+		// i如果是质数我们输出i
+		if(isZhishu(i)) {
+			console.log(i);
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

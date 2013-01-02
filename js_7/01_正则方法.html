@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	// exec() 用于字符串匹配 返回首次匹配结果的数组，没有全局匹配
+	var reg = /abc/;
+	var str = "abchdjdjabc";
+	console.log(reg.exec(str));
+
+
+
+	// test()检测字符串中是否含有正则表达式匹配的部分  返回值布尔值
+	var reg1 = /abc/;
+	var str1 = "ajjdckdkabc";
+	console.log(reg1.test(str1));
+	// test()参数书写要检测的字符串
+	console.log(reg1.test("hdjajbc"));
+	</script>
+</body>
+</html>

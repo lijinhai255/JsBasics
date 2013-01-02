@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	//    //g全局匹配，将所有的匹配结果都输出
+	console.log("jdabcjdjaycdaxcd".match(/a[a-z]c/));
+	console.log("jdabcjdjaycdaxcd".match(/a[a-z]c/g));
+
+
+	//   //i  对大小写不敏感 修饰符可以同时使用   //gi
+	console.log("jdabcjdjaYcdaXcd".match(/a[a-zA-Z]c/g));
+	console.log("jdabcjdjaYcdaXcd".match(/a[a-z]c/gi));
+
+
+
+	</script>
+</body>
+</html>

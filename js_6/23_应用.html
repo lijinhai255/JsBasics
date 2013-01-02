@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	/*
+	将“everything is good in its season”，转为每个单词的首字母大写。
+	即“Everything Is Good In Its Season”
+	
+	*/
+
+	var str = "everything is good in its season";
+	// 先得到每一个单词用split()  得到是单词字符串组成的数组
+	var arr = str.split(" ");
+	
+	// 遍历数组
+	for(var i = 0 ; i < arr.length ; i ++) {
+		// console.log(arr[i]);
+		// 将数组每一项重新赋值
+		// everything = E + verything(得到字符串的首字符charAt(0) + 从索引值1一直截取到最后)
+		arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+	}
+	// console.log(arr);
+
+	// 将得到的新数组转为字符串join()
+	str = arr.join(" ");
+	console.log(str);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

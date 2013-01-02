@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	/*清除默认样式*/
+	* {
+		padding: 0;
+		margin: 0;
+	}
+	.box {
+		width: 300px;
+		padding: 20px;
+		border: 1px solid #000;
+		margin: 50px auto;
+		/*overflow: hidden;*/
+	}
+	.box p {
+		height: 50px;
+		line-height: 50px;
+		position: relative;
+	}
+	.box p span {
+		position: absolute;
+		/*脱离可以设置宽高  不设置高度内容撑开*/
+		width: 200px;
+		border: 1px solid red;
+		background-color: pink;
+		left: 10px;
+		top: 40px;
+		display: none;
+	}
+
+	</style>
+	<script type="text/javascript">
+	
+	window.onload = function() {
+		// 当标签加载完毕才执行函数 
+		// 获取元素对象
+		var oPara = document.getElementById("para");
+		var oTip = document.getElementById("tip");
+
+		// 鼠标进入p，span出现
+		oPara.onmouseenter = function() {
+			oTip.style.display = "block";
+		};
+
+
+		// 绑定事件 可以赋值匿名函数，还可以赋值函数名
+		// 鼠标离开p，span消失
+		oPara.onmouseleave = xiaoshi;
+		// 声明函数消失
+		function xiaoshi() {
+			// style添加的样式都是行内
+			oTip.style.display = "none";
+			console.log("我执行了");
+		}
+
+		// xiaoshi();
+	}
+	</script>
+</head>
+<body>
+	<div class="box">
+		<form action="">
+			<p>
+				<input type="text">
+			</p>
+			<p>
+				<input type="password">
+			</p>
+			<!-- p标签不能嵌套p标签 -->
+			<p id="para">
+				<!-- 复选框 -->
+				<input type="checkbox" name="box" id="box" checked>
+				<label for="box">点击选择</label>
+				<span id="tip">提示文本提示文本提示文本提示文本提示文本提示文本提示文本提示文本</span>
+			</p>
+		</form>
+	</div>
+	
+</body>
+</html>

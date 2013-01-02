@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	// 函数声明,形式参数
+	function sum(a,b) {
+		// console.log(a + b);
+		// 可以使用return接收变量
+		return a + b;
+	}
+
+	// return可以将函数作为表达式，得到数值结果，可以作为实际参数参与其他函数
+	console.log(sum(1,sum(1,3)));
+
+
+
+
+	// return直接使用。函数内部使用return，直接返回，后面的语句不再执行
+	// 声明函数
+	function fun() {
+		console.log(1);
+		console.log(2);
+		// 函数遇见return直接返回
+		return;
+		console.log(3);
+		console.log(4);
+		console.log(5);
+	}
+
+
+	// 调用
+	fun();
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

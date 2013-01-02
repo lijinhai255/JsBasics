@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	/*清除默认样式*/
+	* {
+		padding: 0;
+		margin: 0;
+	}
+	.box {
+		width: 100%;
+		padding: 30px 0px;
+		background-color: rgba(255,255,255,.4);
+	}
+	.box .inner {
+		width: 1040px;
+		margin: 0px auto;
+	}
+	.box .inner img {
+		width: 200px;
+	}
+	/*大背景 body*/
+	body {
+		background: url(images/baidu/1.jpg) no-repeat center top;
+	}
+
+	</style>
+	
+</head>
+<body>
+	<div class="box">
+		<div class="inner">
+			<img src="images/baidu/1.jpg" alt="" id="pic1">
+			<img src="images/baidu/2.jpg" alt="" id="pic2">
+			<img src="images/baidu/3.jpg" alt="" id="pic3">
+			<img src="images/baidu/4.jpg" alt="" id="pic4">
+			<img src="images/baidu/5.jpg" alt="" id="pic5">
+		</div>
+	</div>
+	<script type="text/javascript">
+	// 获取元素对象
+	// 获取body对象
+	var oBody = document.body;
+	var oPic1 = document.getElementById("pic1");
+	var oPic2 = document.getElementById("pic2");
+	var oPic3 = document.getElementById("pic3");
+	var oPic4 = document.getElementById("pic4");
+	var oPic5 = document.getElementById("pic5");
+
+
+	// 信号量思维
+	var idx = 1;
+	// 点击pic2，body换图
+	oPic2.onclick = function() {
+		// 1信号改变
+		idx = 2;
+		// 2体现在元素身上
+		// oBody.style.backgroundImage = "url(images/baidu/" + idx + ".jpg)";
+		change();
+	}
+
+	// 点击pic3，body换图
+	oPic3.onclick = function() {
+		// 1信号改变
+		idx = 3;
+		// 2体现在元素身上
+		// oBody.style.backgroundImage = "url(images/baidu/" + idx + ".jpg)";
+		change();
+	}
+	// 点击pic4，body换图
+	oPic4.onclick = function() {
+		// 1信号改变
+		idx = 4;
+		// 2体现在元素身上
+		// oBody.style.backgroundImage = "url(images/baidu/" + idx + ".jpg)";
+		change();
+	}
+	// 点击pic2，body换图
+	oPic5.onclick = function() {
+		// 1信号改变
+		idx = 5;
+		// 2体现在元素身上
+		// oBody.style.backgroundImage = "url(images/baidu/" + idx + ".jpg)";
+		change();
+	}
+	// 点击pic1，body换图
+	oPic1.onclick = function() {
+		// 1信号改变
+		idx = 1;
+		// 2体现在元素身上
+		// oBody.style.backgroundImage = "url(images/baidu/" + idx + ".jpg)";
+		change();
+	}
+
+
+
+	// 声明函数
+	function change() {
+		oBody.style.backgroundImage = "url(images/baidu/" + idx + ".jpg)";
+	}
+
+	// change();
+
+
+
+
+	
+	</script>
+</body>
+</html>

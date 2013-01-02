@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+/*当工作年限不满1年，工资小于8000，年终奖为工资的1倍，否则是1.2倍；
+当工作年限不满2年，工资小于10000，年终奖为工资的1.5倍，否则是1.7倍；
+当工作年限超过2年，工资小于13000，年终奖为工资的2.3倍，否则是3倍；
+
+用户输入
+工作年限：year
+工资：salary
+
+需要给用户返回
+年终奖= 工资 * 倍数
+求：倍数
+*/
+
+// 的到用户输入年限
+var year = parseInt(prompt("请输入年限"));
+// 的到工资
+var salary = parseInt(prompt("请输入工资"));
+
+// 声明变量，倍数
+var beishu = 0;
+
+// 对于工作年限，3种可能不能二选一，只能用if
+if(year === 0) {
+	// 小于1年情况
+	if(salary < 8000) {
+		beishu = 1;
+	}else {
+		beishu = 1.2
+	}
+}else if(year === 1) {
+	// 工资小于10000，年终奖为工资的1.5倍，否则是1.7倍；
+	// 倍数只能两种可能要么1.5，要么是1.7 二选时使用三元表达式
+	// 当salary小于10000满足时beishu = 1.5
+	// 当salary小于10000不满足时beishu = 1.7
+	beishu = (salary < 10000) ? 1.5 : 1.7;
+}else {
+	// 表示以上所有情况都不满足执行的结构体
+	// 工资小于13000，年终奖为工资的2.3倍，否则是3倍；
+	beishu = salary >= 13000 ? 3 : 2.3;
+}
+
+// 殊途同归
+console.log("年终奖是" + (beishu * salary) + "元。");
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

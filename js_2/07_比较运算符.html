@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	// 纯数字比较，结果一定是布尔值 true（正确）   false(不正确)
+	console.log(7 > 8);
+	console.log(7 >= 7);
+
+
+	// true 1 false 0  null 0
+	console.log(true < 0);
+	console.log(false == 0);
+    console.log(true >= 1);
+    console.log(null > -1);
+    // 特殊情况null参与==,===时不是转换为0
+    console.log(null == 0);
+
+
+
+    // ==尽可能让两侧相等
+    console.log(7 == 7);
+    console.log(true == 1);
+    console.log(false == 0);
+    console.log(0 == 0);
+
+
+    // ！=对立面是==
+    console.log(7 != 7);
+    console.log(null != 0);
+    console.log(true != 1);
+    console.log(false != 0);
+    console.log(0 != 0);
+
+
+    // ===全等于，判断数据类型同时还判断数值
+    console.log(7 === 7);
+    // 纯数字字符串也会发生隐式转换
+    console.log("7" == 7);
+    console.log("7" === 7);
+    console.log(true === 1);
+
+
+    // !==是===对立面
+    console.log(7 !== 7);
+    console.log("7" !== 7);
+    console.log(null !== 0);
+
+
+    // NaN Infinity在参与比较是，不会隐式转换
+    console.log(NaN > 0);
+    console.log(NaN < 0);
+    console.log(NaN == 0);
+    console.log(NaN != 0);
+    console.log(NaN == NaN);
+
+    console.log(Infinity > 10000);
+    console.log(Infinity == Infinity);
+
+
+    // 纯数字字符串，会发生隐式转换
+    console.log("7" > 6);
+    console.log("7" == 7);
+    console.log(7 === "7");
+
+
+    // 普通字符串比较顺序越靠后越大数字，大写字母，小写字母
+    console.log("39" > "a");
+    console.log("A" < "a");
+    console.log("39B" < "39C");
+    console.log("1028" < "7");
+
+
+    // 3 > 2 > 1按照从左到右
+    console.log(3 > 2);
+    // true > 1会隐式转换
+    console.log(true > 1);
+
+    console.log(3 > 2 >1 );
+
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	waiceng: for(var i = 1; i < 4 ; i ++) {
+		for(var j = 1; j < 4 ; j ++) {
+			if(j == 2) {
+				// continue只能控制i不能控制j
+				continue waiceng;
+			}
+			console.log(i,j);
+		}
+	}
+	/*
+	i=1,i<4真，j=1,j<4真，执行j循环j==2不满足，执行输出1,1
+			   j=2,j<4真，执行j循环j==2满足if执行continue结束i=1这次循环，i++
+	i=2,i<4真，j=1,j<4真，执行j循环j==2不满足，执行输出2,1
+			   j=2,j<4真，执行j循环j==2满足if执行continue结束i=2这次循环，i++
+	i=3(3,1)
+	i=4,i<4假结束整体循环
+	*/
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

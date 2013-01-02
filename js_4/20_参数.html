@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	// 声明函数
+	// 在声明函数小括号中书写的是形式参数a,b,c,d
+	// 参数之间用逗号隔开
+
+	function fun(a,b,c,d) {
+		console.log(a);
+		console.log(b);
+		console.log(c);
+		console.log(d);
+		console.log(c + d);
+		// arguments函数内部自带类数组对象，保存的是实际参数
+		console.log(arguments);
+	}
+
+	// 函数调用
+	// 函数调用语句中小括号书写是实际参数
+	// 传参：动作，计算机完成  将实际参数赋值给形参参数这个过程
+	// fun(1,2,3,4);
+	// 实参可以书写任何数据类型
+	// 实参数据类型不同，函数的功能也可能不同
+	// fun(1,2,3,"4");
+
+
+
+	// 实参少，优先赋值前面，没有赋值undefined
+	// 函数内部自带类数组对象arguments，保存的是实际参数
+	// fun(1,10);
+	// 实参多，直接将多余部分舍弃不是层叠
+	fun(1,2,3,4,5,6);
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

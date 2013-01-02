@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	// 体积V=1/3π半径2*高
+
+	// 得到的用户输入半径，高度
+	var r = parseInt(prompt("请输入半径"));
+	// 参数之间用逗号隔开
+	var h = parseInt(prompt("请输入高度","默认高度"));
+
+	// 声明变量v，赋值=  表示将右侧的计算公式的到的结果赋值给左侧的变量
+	// 数学运算符不能省略 * 也不能省略
+	// 变量在使用时用的是变量存储的值
+	var v = 1 / 3 * Math.PI * Math.pow(r, 2) * h;
+	// 字符串拼接 + 
+	// 一对双引号里面的文字内容原样输出
+	// 对于变量绝对不能书写在双引号中，用+拼接
+	console.log("用户输入的半径" + r + ",高度" + h + "对应的体积是" + v + "。" );
+
+
+
+
+	</script>
+</body>
+</html>

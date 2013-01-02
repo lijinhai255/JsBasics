@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	//预定义类 是字符集简写[]  一次只能匹配一个字符
+	//   .表示出了回车换行之所的所有字符
+	console.log("s&%jjdk          d					k".match(/./g));
+	console.log("s&%jjdk          d					k".match(/.+/g));
+	// \d数字 [0-9]   \D非数字
+	console.log("jkf0js9k1".match(/\d/g));
+	console.log("jk&f0js9k1".match(/\D+/g));
+
+	// \s空白字符 \S非空白字符
+	console.log("jk       f0						js9k1".match(/\s+/g));
+	console.log("jk       f0						js9k1".match(/\S+/g));
+	// \w  单词字符字母，数字，_  \W非单词字符
+	console.log("jk0________&%@      f0						YYYY9k1".match(/\w+/g));
+	console.log("jk0________&%@      f0						YYYY9k1".match(/\W+/g));
+
+
+
+
+ 	
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

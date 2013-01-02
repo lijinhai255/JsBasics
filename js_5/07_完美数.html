@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	/*
+	案例2：找1000以内的完美数：（一个数的约数除了它本身外其他约数和还等于这个数）。
+	比如6 = 1 + 2 + 3 那么6就是完美数
+	思考：1000以内所有的完美数 → 判断任意数字是不是完美数 → 求任意数字约数和
+	*/
+
+
+	/*
+	求任意数字约数和：
+	返回值：约数和（不包括自身）
+	参数：一个数字
+	*/
+	function yueshuhe(a) {
+		// 求a所有的约数加和
+		// 累加器
+		var sum = 0;
+		// 不包括自身a
+		for(var i = 1 ; i < a; i ++) {
+			// 只要约数
+			if(a % i == 0) {
+				sum += i;
+			}
+		}
+		// 结果返回
+		return sum;
+	}
+
+
+	/*
+	判断任意数字是不是完美数
+	返回值：如果是完美数给用户一个true不是给用户一个false
+	参数：一个数字
+	*/
+	function isWanmei(b) {
+		// 用户输入b我们需要告诉用户b是不是完美数
+		if(yueshuhe(b) == b) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+
+	
+	// 1000以内完美数
+	// 一一列举所有的数字
+	for(var i = 1; i <= 1000 ; i ++) {
+		// 只有完美数才输出
+		// if限制
+		// 判断遍历到的这个i是不是完美数
+		if(isWanmei(i)) {
+			console.log(i);
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

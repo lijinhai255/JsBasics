@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	// 参数：可以书写比较函数
+	var arr = [1,20,40,8000,47,90,20];
+	// // 按照从小到大升序排序
+	// arr.sort(function(a,b) {
+	// 	// a,b是形参是两个要比较的数据
+	// 	// 根据返回值的正负定义升序或者降序
+	// 	if(a > b) {
+	// 		return 3;
+	// 	}else if(a == b) {
+	// 		return 0;
+	// 	}else {
+	// 		return -2;
+	// 	}
+	// });
+
+	// console.log(arr);
+
+
+
+	// 可以自定义降序排序根据返回值正负
+	arr.sort(function(a,b) {
+		// a,b是两个要比较的数据
+		if(a > b) {
+			return -2;
+		}else if(a == b) {
+			return 0;
+		}else if(a < b) {
+			return 4;
+		}
+	});
+
+	console.log(arr);
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

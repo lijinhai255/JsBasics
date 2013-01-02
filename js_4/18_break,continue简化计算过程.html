@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	// 2-该数开方之间有没有其他约数，如果有表示一定不是质数如果没有表示是质数
+	// 的到输入
+	// var num = parseInt(prompt("请输入数字"));
+	// for(var i = 2; i <= Math.sqrt(num) ; i ++ ) {
+	// 	// i是不是num的约数
+	// 	// 如果是i是约数，num不是质数
+	// 	if(num % i == 0) {
+	// 		alert(num + "不是质数");
+	// 		break;
+	// 	}
+	// }
+
+
+
+
+	// // 将1000以内所有的质数输出
+	// // 一一列举2,-1000之间所有的数字for
+	// wai: for(var i = 2; i <= 1000 ; i ++) {
+	// 	// 判断i=16是不是质数，质数输出i
+	// 	// 2-i的开方数之间有没有其他约数
+	// 	// 一一列举所有2-i开方数之间所有数
+	// 	for(var j = 2; j <= Math.sqrt(i) ; j ++) {
+	// 		// 判断j是不是i的约数，如果是表示i有其他约数，这个i不是质数，赶快测试i++
+	// 		if(i % j == 0) {
+	// 			// i不是质数，不想要
+	// 			// continue控制i不是j
+	// 			continue wai;
+	// 		}
+	// 	}
+	// 	console.log(i);
+	// }
+
+
+
+
+	// 1000以内质数
+	// 一一列举1-1000
+	wai: for(var i = 2; i <= 1000 ; i ++) {
+		// 判断i=16是不是质数
+		// 1,16是约数。判断除了1和他本身之外有没有其他约数
+		for(var j = 2; j < i; j ++) {
+			if(i % j == 0) {
+				// 找到了其他约数j
+				// 这个i不是质数
+				continue wai;
+			}
+		}
+		// 可以将i输出
+		console.log(i);
+	}
+	/*
+	i=16, j=2,执行continue结束i
+	i=25, j=2,3,4,5执行continue结束i
+
+	*/
+
+
+
+
+	</script>
+</body>
+</html>

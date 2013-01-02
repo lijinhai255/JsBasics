@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	function outer() {
+		// 对于inner  a = 10是外部环境
+		var a = 10;
+		function inner() {
+			// 对于inner 内部语句console.log(a)
+			console.log(a);
+		}
+		// return 2;
+		// return a;
+		return inner;
+	}
+	// 调用outer() 返回值inner函数定义
+	console.log(outer());
+
+
+	var i = outer();
+	i();
+
+	</script>
+</body>
+</html>

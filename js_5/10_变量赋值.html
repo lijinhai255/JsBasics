@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	// 声明变量
+	// 简单数据类型保存的是值
+	// a保存的是简单数据类型
+	var a = 10;
+	// 将a保存的值复制一份给b
+	var b = a;
+	// 变量改变不受影响
+	a = 20;
+	console.log(a);
+	console.log(b);
+
+
+
+
+	// 引用数据类型保存的是指针
+	var fun1 = function() {
+		console.log(1);
+	};
+
+	var fun2 = fun1;
+	// 改变fun1或者fun2会互相影响
+	fun1.ha = "哈哈";
+	fun2.xi = "嘻嘻";
+	console.log(fun2.ha);
+	console.log(fun1.xi);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

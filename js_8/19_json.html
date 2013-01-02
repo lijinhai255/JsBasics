@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	/*清除默认样式*/
+	* {
+		padding: 0px;
+		margin: 0px;
+	}
+	ul {
+		list-style: none;
+	}
+	a {
+		text-decoration: none;
+		color: #333;
+	}
+	img {
+		width: 300px;
+		border: 10px solid red;
+	}
+	</style>
+</head>
+<body>
+	<div class="box" id="box"></div>
+	<img src="images/cat.jpg" alt="" id="pic" />
+	<script type="text/javascript">
+	// json
+	var json = {
+		"name": "小明",
+		"height": 180,
+		"weight": "70kg",
+		"aihao": {
+			"aihao1": "吃饭",
+			"aihao2": "学习"
+		}
+	};
+	// 数据类型
+	console.log(typeof json);
+	// 读取
+	console.log(json.name);
+	console.log(json["weight"]);
+
+	// 设置
+	json.sex = "男性";
+	console.log(json);
+
+	// json可以嵌套json 连续打点
+	console.log(json.aihao);
+	console.log(json.aihao.aihao2);
+
+	// 删除delete
+	delete json.weight;
+	console.log(json);
+
+
+	// 遍历k依次遍历json属性名
+	for(var k in json) {
+		// 读取属性
+		console.log(json[k]);
+	}
+
+
+	// json复制 将json复制一份给另外的一个json，保证两个json是独立的地址
+	var json2 = {};
+	for(var k in json) {
+		json2[k] = json[k];
+	}
+	console.log(json2);
+	// 改变json2不影响json
+	json2.name = "小刚";
+	console.log(json2);
+	console.log(json);
+	</script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	// 声明全局变量a
+	var a = 1;
+	// 两个函数都控制a
+	function jia() {
+		a ++;
+		console.log(a);
+	}
+
+	// 调用函数，让a减1
+	function jian() {
+		a --;
+		console.log(a);
+	}
+
+	// 调用a = 2
+	// jia();
+	// 如果后面再次使用a用最新的值参与运算
+	jian();
+	jian();
+	jian();
+	// jia();
+	console.log(a);
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

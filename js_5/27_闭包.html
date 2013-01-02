@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	// 每次函数调用都是一个全新的闭包，外部环境是全新的，内部语句也是全新的
+	function outer() {
+		var a = 10;
+		function inner() {
+			console.log(++ a);
+		}
+		return inner;
+	}
+
+	// 每一次函数调用都是一次全新闭包。互不影响
+
+	var inn1 = outer();
+	var inn2 = outer();
+
+	inn1();
+	inn1();
+	inn1();
+	inn2();
+	inn2();
+	inn2();
+	inn2();
+	inn2();
+	inn1();
+
+
+
+
+	
+
+
+	
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

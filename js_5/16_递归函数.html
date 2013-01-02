@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	// 1,1,2,3,5,8,13,21,34,55……(斐波那契数列)
+	// 数列 用户输入项数 我们可以的到具体项数对应的值
+	// 在函数内部调用自身函数
+	function feibo(n) {
+		// 用户输入n返回第n项对应的值
+		// 第一项和第二项
+		if(n == 1 || n == 2) {
+			return 1;
+		}else {
+			// 从第三项开始
+			return feibo(n-1) + feibo(n-2);
+		}
+	}
+
+	console.log(feibo(4));
+	console.log(feibo(10));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

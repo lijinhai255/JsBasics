@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>html操作</title>
+</head>
+<body>
+	<div class="box" id="box" data-ming="hezi">盒子</div>
+	<img src="images/baby.png" alt="" id="pic">
+	<script type="text/javascript">
+	// document表示文档对象
+	console.log(typeof document);
+	// title网页标题
+	console.log(document.title);
+	console.log(typeof document.title);
+	// body 获取body对象
+	console.log(document.body);
+
+
+	// 设置=
+	document.title = "网页标题";
+	// 通过id获取元素对象
+	var oBox = document.getElementById("box");
+	console.log(oBox);
+	console.log(typeof oBox);
+	// 获取元素属性
+	console.log(oBox.id);
+
+	// 获取元素对象
+	var oImg = document.getElementById("pic");
+	// 读取img属性值
+	console.log(oImg.src);
+	// 设置
+	oImg.src = "images/xiaoming.png";
+
+
+	// innerHTML可以读取内部文本
+	console.log(oBox.innerHTML);
+	// 可以设置内部文本使用=
+	console.log(oBox.innerHTML = "改变");
+
+
+
+	// getAttribute()
+	// 参数：属性名
+	// 返回值：属性值
+	// 调用对象元素对象
+	console.log(oBox.getAttribute("data-ming"));
+
+	// setAttribute()
+	// 参数：第一个参数属性名，第二个参数属性值
+	oBox.setAttribute("data-ming","xiangzi");
+
+
+
+
+	</script>
+</body>
+</html>

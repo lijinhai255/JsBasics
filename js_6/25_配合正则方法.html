@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	var str = "everything is good in its season";
+	var str1 = "everything                      is    good             in its season";
+	// 参数字符串
+	var arr = str.split(" ");
+	// console.log(arr);
+	// 参数可以是正则，切割：多个空格/\s+/
+	var arr2 = str1.split(/\s+/);
+	// console.log(arr2);
+
+
+
+
+
+
+	// var str3 = "aabchjdabcjjabcj";
+	// // match()将匹配的字符串在数组中输出
+	// // 参数：字符串
+	// console.log(str3.match("abc"));
+	// // 参数：正则
+	// console.log(str3.match(/abc/));
+	// // 正则后面可以书写g，表示全局匹配
+	// console.log(str3.match(/abc/g));
+
+
+
+
+
+	// // search()将指定字符串位置返回
+	// var str4 = "jdjdabcjkdkabcdd";
+	// // 参数：字符串
+	// console.log(str4.search("abc"));
+	// // 正则
+	// console.log(str4.search(/abc/g));
+	// // 没有匹配的字符串返回-1
+	// // d{3}连续3个d
+	// console.log(str4.search(/d{3}/))
+	// console.log(str4.search(/d{2}/))
+
+
+
+
+	// replace(a,b)替换 将b替换到a
+	var str5 = "www.baidu.com";
+	// 第一个参数可以是字符串可以是正则
+	console.log(str5.replace(/baidu/,"icketang"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

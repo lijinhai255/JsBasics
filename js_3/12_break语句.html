@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	// 用户输入数字
+	var num = parseInt(prompt("请输入数字"));
+	switch(num) {
+		case 1:
+			console.log(1);
+		case 2:
+			console.log(2);
+		case 3:
+			console.log(3);
+		case 4:
+			console.log(4);
+			break;
+		case 5:
+			console.log(5);
+		default:
+			console.log("没有匹配");
+	}
+	/*
+	用户输入2：
+		匹配case 2:执行后面的语句输出（2）
+		没有书写break,不会结束switch语句，即使后面的case 不匹配也执行后面的语句直到语句结束。
+		输出3,4,5，没有匹配。
+
+
+	在case 4: 中添加Break，只有执行break立即结束switch语句，不再继续往下执行
+		输入2: 匹配case 2输出2,3,4
+			执行break，立即结束switch语句。所有不会再输出5,没有匹配。
+	*/
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

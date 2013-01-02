@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	// 用户输入分数
+	var num = parseInt(prompt("请输入分数"));
+	if(num >= 90) {
+		console.log("A级");
+	}else if(num >= 80) {
+		console.log("B级");
+	}else if(num >= 70) {
+		console.log("C级");
+	}else if(num >= 60) {
+		console.log("D级");
+	}
+
+	// 这是其他js语句
+	console.log("查分结束");
+	/*
+	用户输入 89,不满足条件1，满足条件2执行该结构体，输出“B级”，跳出if语句，执行后面js语句输出“查分结束”
+
+
+	用户输入59，不满足以上所有条件执行else，没有跳出if语句执行后面的js
+	输出“查分结束”
+
+
+	殊途同归：不管if语句执行哪一个结构体，if后面的js都会执行
+	输入79，不满足条件1和2，满足条件3，执行后面的结构体输出“C级”，结束if语句
+	执行殊途同归的语句(后面的js语句)  输出“查分结束”
+	*/
+
+
+
+
+	</script>
+</body>
+</html>

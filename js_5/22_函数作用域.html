@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	function fun1() {
+		console.log(1);
+		// 在fun1内部声明fun2
+		function fun2() {
+			console.log(2);
+		}
+		// 只能在fun1内部使用
+		fun2();
+	}
+
+
+	fun1();
+	// 在fun1外部任何地方都不能使用
+	fun2();
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

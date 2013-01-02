@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// console.log(0x17);
+
+	// 八进制  前缀0,0o,0O  数字只能是0-7  逢八进一   
+	console.log(01);
+	console.log(010);
+	console.log(0100);
+
+	// 前缀是0，后面有超过7数字不会报错。会强制转为十进制
+	console.log(09);
+	console.log(089);
+
+
+	// 前缀是0o.0O后面数字超过7，会报错
+	// console.log(0o89);
+
+
+
+	// 十六进制0x,0X
+	console.log(0xf);
+	console.log(0x1);
+	// 逢十六进一
+	console.log(0x10);
+	console.log(0X100);
+
+
+	// 十六进制有效数字0-9，a-f 超过这些直接报错
+	// console.log(0Xh);
+
+
+
+
+	// 浮点数
+	// 浮点数只能使用十进制表示
+	console.log(8.999999);
+	console.log(0.000034);
+	console.log(3.4e-5);
+
+
+
+	// 特殊值
+	// Infinity 无穷大
+	console.log(10);
+	console.log(2000000000);
+	console.log(2e10000);
+	// 非0数字除以0是Infinity
+	console.log(8/0);
+	console.log(-2e10000);
+
+
+	// NaN  不是数字数字  0/0
+	console.log(NaN);
+	console.log(0/0);
+	</script>
+</body>
+</html>

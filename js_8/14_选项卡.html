@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	/*清除默认样式*/
+	* {
+		padding: 0px;
+		margin: 0px;
+	}
+	ul {
+		list-style: none;
+	}
+	a {
+		text-decoration: none;
+		color: #333;
+	}
+	body {
+		/*文字属性可以继承*/
+		font-family: "Arial","Microsoft Yahei";
+		font-size: 14px;
+		color: #333;
+	}
+	.tab {
+		width: 310px;
+		height: 194px;
+		margin: 50px;
+		/*overflow: hidden;*/
+	}
+	.tab .hd {
+		/*宽度省略不写 自动盛满父盒子的内容宽度*/
+		height: 30px;
+		border-top: 2px solid #206F96;
+	}
+	.tab .hd span {
+		/*span 行内元素  同级元素span 并排显示 设置宽高  一定是浮动*/
+		float: left;
+		width: 102px;
+		height: 29px;
+		border: 1px solid #CFCFCF;
+		/*单一后层叠  没有边框none*/
+		border-top: none;
+		font-size: 14px;
+		line-height: 29px;
+		text-align: center;
+		/*mgl可以使用负数，表示相对于上一个元素向左移动*/
+		/*mgl目的层叠1px边框*/
+		margin-left: -1px;
+		/*渐变背景色*/
+		background-color: #eee;
+		/*模拟鼠标小手状*/
+		cursor: pointer;
+	}
+	/*first普通类名  样式特殊添加类名*/
+	.tab .hd span:first-child {
+		margin-left: 0px;
+	}
+	/*我们可以选中新闻，图片，军事 这是轮换类名   选中谁样的样式特殊*/
+	.tab .hd span.cur {
+		font-weight: bold;
+		/*背景图没有也是None*/
+		background-color: #fff;
+		border-bottom-color: #fff;
+	}
+	.tab .bd {
+		/*大盒子一般设置盒子属性*/
+		height: 145px;
+		padding-left: 9px;
+		padding-top: 17px;
+	}
+	.tab .bd div {
+		/*同样的样式可以使用标签选择器  简化代码*/
+		height: 145px;
+		background-color: pink;
+		/*消失  不存在*/
+		display: none;
+	}
+	/*轮换类名 谁有active 谁出现*/
+	.tab .bd div.active {
+		/*block 出现*/
+		display: block;
+	}
+	</style>
+</head>
+<body>
+	<div class="tab">
+		<!-- 标题 -->
+		<div class="hd" id="hd">
+			<span class="cur">新闻</span>
+			<span>图片</span>
+			<span>军事</span>
+		</div>
+		<!-- 内容 -->
+		<div class="bd" id="bd">
+			<div class="active">
+				<ul>
+					<li><a href="">新闻新闻新闻</a></li>
+					<li><a href="">新闻新闻新闻</a></li>
+					<li><a href="">新闻新闻新闻</a></li>
+					<li><a href="">新闻新闻新闻</a></li>
+					<li><a href="">新闻新闻新闻</a></li>
+				</ul>
+			</div>
+			<div>图片</div>
+			<div>军事</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		// 获取元素
+		var spans = document.getElementById("hd").getElementsByTagName("span");
+		var divs = document.getElementById("bd").getElementsByTagName("div");
+		console.log(divs);
+		// 鼠标进入span span改变 div改变
+		for(var i = 0 ; i < spans.length ; i ++) {
+			// 提前将i保存
+			spans[i].index = i;
+			spans[i].onmouseenter = function() {
+				// 对应的span改变,只要有对应一定有排他
+				// 先将所有span去掉cur
+				for(var j = 0 ; j < spans.length ; j ++) {
+					spans[j].className = "";
+				}
+				// 对应的span加cur 
+				this.className = "cur";
+
+
+
+
+
+
+				// 先将所有的div去掉active
+				for(var k = 0 ; k < divs.length; k ++) {
+					divs[k].className = "";
+				}
+				// 先排他再对应
+				// divs[i].className = "active";
+				divs[this.index].className = "active";
+			}
+		}
+
+	</script>
+</body>
+</html>

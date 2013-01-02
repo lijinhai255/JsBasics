@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>html操作</title>
+	<style type="text/css">
+	/*清除默认样式*/
+	* {
+		padding: 0;
+		margin: 0;
+	}
+	.box {
+		width: 300px;
+		height: 300px;
+		background-color: red;
+		color: #fff;
+		font-size: 30px;
+	}
+
+	</style>
+</head>
+<body>
+	<div class="box" id="box" data-ming="hezi" style="width: 100px;height: 200px; background-color: lightblue;">盒子</div>
+	<img src="images/baby.png" alt="">
+	<script type="text/javascript">
+	// 获取元素对象
+	var oBox = document.getElementById("box");
+	// 读取css属性值 文字颜色
+	// 只能读取行内样式
+	console.log(oBox.style);
+	console.log(oBox.style.color);
+	// 如果读取的单一属性需要改为驼峰命名
+	console.log(oBox.style.backgroundColor);
+
+
+	// 设置：使用=
+	oBox.style.color = "black";
+
+
+	// 体会单击事件
+	// 元素.事件名 = 匿名函数
+	oBox.onclick = function() {
+		alert(oBox.innerHTML);
+	};
+
+	// 函数执行，只要触发oBox单击事件，匿名函数就会立即执行。
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

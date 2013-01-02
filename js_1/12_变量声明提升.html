@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	// 我们可以先使用变量
+	console.log(a);
+	// 变量在后面进行声明，不会报错，结果是undefined,即使有赋值也是undefined
+	var a = 10;
+
+
+
+
+	/*
+	解析过程：
+	1将所有变量声明语句提升到最前面var a;(预解析)
+	2其他js按照从上到下顺序执行console.log(a);
+	3剩余赋值语句a = 10;(原位置执行赋值语句)
+	*/
+	console.log(a);
+	</script>
+</body>
+</html>

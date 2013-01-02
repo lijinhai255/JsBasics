@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	/*
+	获取<p class='demo'>hello icketang</p>内部文案
+	根据开始标签和结束标签获取内部文本
+
+	分组的反向使用：不添加小括号一定没有编码一定不能再次使用
+	*/
+	var str = "<h3 class='demo'>hello icketang</h3>";
+	str = str.replace(/^<.+>(.+)<\/[a-z0-9]+>$/,"$1");
+	console.log(str);
+
+
+
+	</script>
+</body>
+</html>

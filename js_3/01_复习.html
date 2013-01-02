@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// 用户输入数字，弹出
+		// 备用选项，用户输入肯定使用用户输入的值，用户不输入使用备用选项。
+		var num = parseInt(prompt("请输入数字")) || 0;
+		alert(num);
+
+		/*
+		如果用户什么都不进行输入
+		prompt() 的到的结果一定是字符串。   空字符串 "";
+		parseInt("");  结果是NaN
+
+		NaN, 参与数学运算结果NaN。
+		*/
+
+		alert(++ num);
+
+	</script>
+</body>
+</html>

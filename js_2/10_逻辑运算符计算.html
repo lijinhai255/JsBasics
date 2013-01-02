@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	// 变量赋值，   计算机遇见式子，都是先计算将结果赋值给左侧的变量
+	// 顺序：非与或，从左到右
+	// 逻辑与：都真才真
+	// 逻辑或： 都假才假
+	var sum = false || !false && false || true;
+	/*
+			= false || true && false || true;
+			= false || false || true
+			= false || true
+			= true
+	*/
+	console.log(sum);
+
+
+
+
+
+
+
+
+
+	var sum2 = 4 && "hello" || !false || !true && null;
+	/*
+	转为真： 非0数字，非空字符串
+	短路语法：
+		a && b: a能够转为真，结果是b；
+		a || b: a能够转为真，结果a；
+	先非运算
+			 = 4 && "hello" || true || false && null;
+	再与运算 = “hello" || true || false && null;
+	从左到右 = “hello" || true || false;
+			 = “hello” || false
+			 = "hello"
+	*/
+	console.log(sum2);
+
+
+	</script>
+</body>
+</html>

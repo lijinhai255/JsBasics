@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	// /^表达式/   匹配字符串必须在开头
+ 	console.log("abcjjfabcjfabc".match(/abc/g));
+ 	console.log("abcjjfabcjfabc".match(/^abc/g));
+ 	console.log("abcjjfabcjfabc".match(/^abc/));
+
+
+ 	// /表达式$/  匹配的字符串必须在结尾
+ 	console.log("xxhhdxxxdxxxx".match(/x+/g));
+ 	console.log("xxhhdxxxdxxxx".match(/^x+/g));
+ 	console.log("xxhhdxxxdxxxx".match(/x+$/g));
+
+
+ 	// \b单词边界(开头结尾都算边界)  空格隔开的是单词  独立的一个单词
+ 	console.log("this isaa icketang".match(/\b[a-z]+/g));
+ 	console.log("this isaa icketang".match(/\b[a-z]/g));
+ 	console.log("this isaa icketang".match(/[a-z]\b/g));
+
+ 	// \B 非单词边界
+ 	console.log("this isaa icketang".match(/[a-z]+\B/g));
+ 	console.log("this isaa icketang".match(/\B[a-z]+\B/g));
+
+ 	
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

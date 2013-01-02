@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	// 先使用名字
+	// 输出函数名，表示将函数整体输出
+	console.log(fun);
+	// 声明变量
+	var fun = 10;
+	// 声明fun函数
+	function fun() {
+		console.log(1);
+	}
+	/*
+	执行过程：
+	（预解析）
+	函数优先提升
+	function fun() {}; fun是一个名称，名称保存的函数（fun这个名字已经声明）
+	提升变量var fun;声明过的变量不会重复声明。
+	（其他语句从上到下正常执行）
+	console.log(fun);
+	fun = 10;(fun变量可以多次赋值，覆盖前面函数的赋值)
+	*/
+	console.log(fun);
+	fun();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	// 正则表达式
+	var reg = /a{3}/;
+	// 数据类型
+	console.log(typeof reg);
+
+
+
+
+	// 检测本地号码  000-1234567
+	var reg2 = /^\d{3}-\d{7}$/;
+	// 用户输入字符串
+	var str = prompt("请输入本地号码");
+	// 检测用户输入的str是否满足reg2规则
+	if(reg2.test(str)) {
+		console.log("是本地号码");
+	}else {
+		console.log("不满足，请重新输出");
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

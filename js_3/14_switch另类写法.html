@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	// 书写分数
+	// switch后面书写true，case后面表达式
+
+
+	// 的到用户分数
+	var num = parseInt(prompt("请输入分数"));
+	switch(true) {
+		// 匹配case时，按照正常从上到下顺序
+		case num < 60:
+			console.log("不及格");
+			break;
+		case num < 70:
+			// 表示的num 一定是>=60
+			console.log("D级");
+			break;
+		case num < 80:
+			console.log("c级");
+			break;
+		case num < 90:
+			console.log("B级");
+			break;
+		default:
+			// 以上case都不匹配执行default
+			console.log("非常好");
+	}
+	/*
+	当用户输入79, 
+	不匹配<60
+	不匹配<70
+	匹配num < 80:执行后面的语句
+		输出“C”
+		执行break,结束switch
+	*/
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	// 1推导循环执行的顺序，用文字进行说明，并推导出可能的结果。
+  	for(var m = 1,n = 2; m + n < 18; m++){
+		n += 3;
+		console.log(m);
+  	}
+  	console.log(n);
+  	console.log(m);
+  	/*
+  	m=1,n=2;m+n<18真;执行循环语句n=5,输出1
+  	m=2,n=5;m+n<18真;执行循环语句n=8,输出2
+  	m=3,n=8;m+n<18真;执行循环语句n=11,输出3
+  	m=4,n=11;m+n<18真;执行循环语句n=14,输出4
+  	m=5,n=14;m+n<18假;只要看到假立即停止for循环
+
+  	将执行for循环后面的语句
+  	输出n=14
+  	输出m=5
+  	*/
+
+	</script>
+</body>
+</html>

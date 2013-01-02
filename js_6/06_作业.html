@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	/*
+	如果整数A 的全部约数（包括1，不包括A 本身）之和等于B，且整数B 的全部约数
+（包括1，不包括B 本身）之和等于A，则称整数A和B是一对亲密数。
+求2000 以内的全部亲密数。
+
+
+目的：输出2000以内所有的亲密数  → 判断数字是不是亲密数 → 约数和
+*/
+// 输出2000以内亲密数
+for(var i = 1 ; i <= 2000 ; i ++) {
+	// 亲密数才输出
+	if(isQms(i)) {
+		console.log(i,yueshuhe(i));
+	}
+}
+
+
+// 亲密数判断
+// 参数：一个数字
+// 返回值：布尔值
+function isQms(num) {
+	var b = yueshuhe(num);
+	if(yueshuhe(b) == num && num != b) {
+		return true;
+	}else {
+		return false;
+	}
+}
+// yueshuhe
+// 参数：一个数字
+// 返回值：约数和
+function yueshuhe(num) {
+	// 累加器
+	var sum = 0;
+	for(var i = 1; i < num ; i ++) {
+		if(num % i == 0) {
+			sum += i;
+		}
+	}
+	return sum;
+}
+
+
+
+	</script>
+</body>
+</html>

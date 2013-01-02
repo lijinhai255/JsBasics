@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	// 全局变量，没有被函数包裹的变量
+	// 可以在任何地方使用，在函数内部也可以使用
+	var b = 20;
+	
+	// 局部变量函数内部声明的变量只能在函数内部使用
+	function fun() {
+		// 声明局部变量
+		var a = 10;
+		console.log(a ++);
+		console.log(b);
+	}
+
+	// 在函数外部不能使用
+	// console.log(a);
+	fun();
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>
